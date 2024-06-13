@@ -1,0 +1,329 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+
+
+body{
+    background: rgb(236, 240, 243);
+    overflow-x: hidden;
+}
+
+
+/* Navbar */
+
+
+.hero-header{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.wrapper{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+
+
+header{
+    padding: 7px 0px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: -21px;
+    
+    
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    width: 20%;
+    
+}
+.logo-text{
+    width: 20%;
+    
+}
+
+.logo span{
+    color:  rgb(24, 109, 215);
+    padding-left: 30px;
+}
+
+hr{
+    border:1px solid rgb(217, 219, 219);
+}
+
+
+/* for nav and its link */
+nav{
+    color: rgb(137, 139, 143);
+
+}
+
+
+nav .togglebtn{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top:45px;
+    right: 3%;
+    z-index: 5;
+    cursor: pointer;
+    display: none;
+}
+nav .togglebtn span{
+    display: block;
+    background-color: #007ced;
+    margin: 5px 0px;
+    width:100%;
+    height:3px;
+    transition: 0.3s;
+    transition-property:  transform, opacity;
+
+}
+
+.navlinks{
+    list-style-type: none;
+    
+}
+.navlinks li{
+    display: inline-block;
+    margin-left: 20px;
+}
+.navlinks li:hover{
+    color: #007ced;
+}
+
+
+/* for main content */
+.container{
+   margin-left: 34px;
+   margin-right: 34px;
+   margin-top: 100px;
+   
+   
+}
+
+
+
+
+.container #home{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+}
+
+.container .introduction{
+    margin-left: 55px;
+    margin-top: 50px;
+   
+}
+.container .introduction .intro h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container .introduction .intro h1 span{
+    color: rgb(24, 109, 215);
+}
+
+.introduction .social-links{
+    margin-top: 40px;
+
+}
+.introduction .social-links h2{
+    margin-right: 20px;
+    font-size: 20px;
+    color: #333;
+    font-weight: 500;
+}
+.introduction .social-links .social-icons{
+    display: flex;
+    
+    margin-right: 304px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.introduction .social-links .social-icons a{
+    font-size: 30px;
+    color: #333;
+    margin-right: 20px;
+padding: 8px;
+border-radius: 50%;
+    
+    display: inline-block;
+    border-right: 2px solid #007ced;
+    border-bottom: 2px solid #007ced;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+   
+  }
+
+.container #home .pp{
+    width: 45vw;
+    height: 100vh;
+}
+
+/* for about section */
+
+#about{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 34px;
+   
+    
+}
+
+.about-section .about-title{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+
+
+.skills .skills-title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #322d2d;
+    margin-bottom: 20px;
+}
+
+/* progress bar 
+ */
+ .progress-bar {
+    width: 100px; /* Width of the progress bar */
+    height: 10px; /* Height of the progress bar */
+    margin-left: 10px; /* Space between the text and the progress bar */
+    background-color: #e0e0e0; /* Background of the progress bar */
+    position: relative;
+    display: inline-block;
+  }
+  
+  .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #3498db; /* Color of the progress */
+    transition: width 0.3s ease;
+  }
+  
+  /* Use the data-progress attribute to set the width for each skill */
+  .skills-list li .progress-bar[data-progress="90"]::after { width: 90%; }
+  .skills-list li .progress-bar[data-progress="80"]::after { width: 80%; }
+  .skills-list li .progress-bar[data-progress="75"]::after { width: 75%; }
+  .skills-list li .progress-bar[data-progress="60"]::after { width: 60%; }
+  .skills-list li .progress-bar[data-progress="40"]::after { width: 40%; }
+  /* Add more rules for different progress percentages */
+
+
+  /* for project  */
+
+  .projects-container .projects-title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #322d2d;
+    margin-bottom: 20px;
+  }
+
+    .projects-container .projects{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 20px;
+        margin-top: 20px;
+    }
+  
+    .projects-container .projects .project  .project-image img{
+      width: 90%;
+      height: 30%   ; 
+    }
+
+    
+    .project-text{
+        margin-top: 10px;
+        display: contents;
+       
+    }
+    
+    .project-text h2{
+        font-size: 20px;
+        font-weight: 700;
+        color: #333;
+    }
+
+
+/* for resume section */
+.resume{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+   
+}
+.resume .resume-title{
+    font-size: 40px;
+    font-weight: 700;
+    color: #322d2d;
+    margin-bottom: 20px;
+}
+.resume button{
+    background-color: #007ced;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+.resume .cv img{
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+}
+
+.resume button:hover {
+    transform: scale(1.1); /* Slightly larger on hover */
+    color: black;
+   
+  }
+
+
+    
